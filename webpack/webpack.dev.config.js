@@ -24,10 +24,10 @@ export default {
         ])
     ],
     module,
-    // eslint: {
-    //     failOnWarning: false,
-    //     failOnError: false
-    // },
+    eslint: {
+        failOnWarning: false,
+        failOnError: true
+    },
     historyApiFallback: {
         index: 'index.html'
     },

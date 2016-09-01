@@ -27,6 +27,10 @@ export default {
         ])
     ],
     module,
+    eslint: {
+        failOnWarning: false,
+        failOnError: true
+    },
     resolve: {
         root: [ path.resolve(__dirname, '../src') ],
         extensions: ['.js', '']
