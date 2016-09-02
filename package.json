@@ -4,7 +4,7 @@
   "description": "Tiny flexible template for writing Phaser games in ES6/ES2015 with Babel.",
   "main": "src/index.js",
   "scripts": {
-    "start": "node ./babel/startup.dev.js",
+    "start": "gulp",
     "webpack": "node ./babel/startup.dev.js",
     "production": "gulp --production",
     "webpack-production": "node node_modules/webpack/bin/webpack.js --verbose --colors --display-error-details --config webpack/webpack.prod.config.babel.js"

@@ -5,13 +5,16 @@ import CopyWebpackPlugin from 'copy-webpack-plugin';
 import module from './webpack.config.module';
 
 export default {
+
     entry: {
         app: ['./src/index.js']
     },
+
     output: {
         path: 'build',
-        filename: 'scripts/game.js'
+        filename: 'scripts/game.min.js'
     },
+
     plugins: [
         new webpack.optimize.UglifyJsPlugin({
             compressor: { warnings: false }
@@ -26,17 +29,22 @@ export default {
             { from: path.resolve(__dirname, '../static') }
         ])
     ],
+
     module,
+
     eslint: {
         failOnWarning: false,
         failOnError: true
     },
+
     resolve: {
         root: [ path.resolve(__dirname, '../src') ],
         extensions: ['.js', '']
     },
+
     stats: {
         colors: true,
         chunks: false
     }
+
 };
